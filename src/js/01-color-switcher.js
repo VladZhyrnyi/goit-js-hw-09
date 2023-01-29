@@ -8,11 +8,9 @@ const refs = {
 
 refs.stop.disabled = true;
 
-console.dir(refs.start);
-// console.log(refs.stop)
-
 refs.start.addEventListener('click', onStartClick);
 refs.stop.addEventListener('click', onStopClick);
+
 
 function onStartClick(e) {
   if (timeoutId) {
@@ -24,6 +22,7 @@ function onStartClick(e) {
   refs.stop.disabled = false;
 }
 
+
 function onStopClick(e) {
   clearInterval(timeoutId);
   timeoutId = 0;
@@ -31,9 +30,11 @@ function onStopClick(e) {
   refs.stop.disabled = true;
 }
 
+
 function backgroundChanger() {
   document.body.style.backgroundColor = getRandomHexColor();
 }
+
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
