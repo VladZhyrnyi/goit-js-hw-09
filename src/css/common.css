@@ -16,3 +16,19 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.btn-container {
+  width: 310px;
+  margin: 200px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button[data-start], button[data-stop] {
+  height: 70px;
+  width: 150px;
+
+  font-size: 20px;
+}
